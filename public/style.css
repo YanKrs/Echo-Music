@@ -1,0 +1,112 @@
+body,ul{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a:hover{
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#header{
+    box-sizing: border-box;
+    height: 70px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(55, 118, 124);
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+
+.desconto{
+
+    text-align: center;
+    color: yellow;
+    background-color: black;
+}
+
+.semana{
+
+    text-align: center;
+    font-family: sans-serif;
+
+}
+
+.maisQuerido{
+    text-align: center;
+    font-family: sans-serif;
+
+}
+
+
+.teste{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#logo {
+    height:60px;
+    width:60px;
+    border-radius:52%;
+    box-shadow:15px 6px 30px black;
+  }
+
+
+.card {
+    width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .card-content p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+
+
+
+
+  .abo{
+    justify-content: center;
+  }
