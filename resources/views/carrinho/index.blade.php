@@ -2,22 +2,47 @@
 @section('main')
 
 
-<h1 style="text-align: center;">Seu Carrinho</h1>
-<div style="align: center; margin: 4% 0% 5% 23%;">
-<table style="text-align: center; padding:10%;">
+<h1 style="text-align: center; margin-bottom:5%;">Seu Carrinho</h1>
 
-<tr>
+
+
+<!-- <tr>
     <th>   </th>
     <th> Nome Do Produto</th>
     <th> Descrição do Produto</th>
     <th> Quantidade</th>
     <th> Preço </th>
-</tr>
+</tr> -->
 
+
+
+
+<ol class="list-group list-group-numbered">
 
 @foreach($carrinho as $carrinho)
 
-<tr style="border: 2px solid black; padding:10%;">
+
+
+
+
+
+
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">{{$carrinho->Produto->PRODUTO_NOME}}</div>
+      {{$carrinho->Produto->PRODUTO_DESC}}
+    </div>
+    <p style="text-align:left;">R${{$carrinho->Produto->PRODUTO_PRECO * $carrinho->ITEM_QTD}}</p>
+    <span class="badge bg-primary rounded-pill">{{$carrinho->ITEM_QTD}}</span>
+</li>
+
+
+
+
+
+
+
+<!-- <tr style="border: 2px solid black; padding:10%;">
 
         <td style="padding: 10%;">{{$carrinho->Produto->PRODUTO_IMAGEM}}</td>
 
@@ -30,11 +55,10 @@
         <td style="border: 2px solid black;"> R${{$carrinho->Produto->PRODUTO_PRECO}} </td>
 
 
-</tr>
+</tr> -->
 
 @endforeach
 
-</table>
-</div>
+</ol>
 
 @endsection

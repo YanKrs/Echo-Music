@@ -7,7 +7,9 @@
 
 <div class="row align-items-start">
     <div class="col">
-    <div class="segundo" style="display:flex; justify-content: center;">
+    <div class="segundo" style="display:flex; justify-content: center; flex-wrap:wrap">
+
+
     @foreach(\App\Models\Produto::all() as $produto)
 
     <div class="card mx-1" style="width: 18rem;">
