@@ -50,7 +50,9 @@
         <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
-                    <button
+
+
+                    <button type="button" class="btn btn-outline-warning" style="color: #e3762b;";
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
                        Sair
