@@ -27,6 +27,8 @@ Route::get('/produto/{produto}',[ProdutoController::class,'show'])->name("produt
 Route::get('/categoria', [CategoriaController::class,'index'])->name("categoria.index");
 Route::get('/categoria/{categoria}', [CategoriaController::class,'show']);
 
+
+
 Route::get('/login', [CategoriaController::class,'index']);
 
 

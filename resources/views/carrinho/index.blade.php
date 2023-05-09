@@ -61,4 +61,9 @@
 
 </ol>
 
+
+<a href=""> <button type="button" class="btn btn-success" style="margin: 50px; display: flex; ">Finalizar compra</button> </a>
+
+
+
 @endsection

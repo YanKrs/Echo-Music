@@ -9,7 +9,11 @@
 <div class="container text-center">
     <div class="row align-items-center">
       <div class="col">
-        <img src='{{$produto->ProdutoImagem[0]->IMAGEM_URL}}' class="img-fluid" alt="...">
+
+      @for ($i = 0; $i < 2; $i++)
+        <img src='{{$produto->ProdutoImagem[ $i ]->IMAGEM_URL}}' class="img-fluid" alt="...">
+
+        @endfor
       </div>
       <div class="col">
         <h1>{{ $produto->PRODUTO_NOME }}</h1>
