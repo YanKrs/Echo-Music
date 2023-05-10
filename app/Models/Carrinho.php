@@ -20,7 +20,7 @@ class Carrinho extends Model
 
    protected function setKeysForSaveQuery($query){
         $query->where('USUARIO_ID', $this->getAttribute('USUARIO_ID'))
-                ->where('PRODUTO_ID',$this->getAttribute('PR2O_ID'));
+                ->where('PRODUTO_ID',$this->getAttribute('PRODUTO_ID'));
 
                 return $query;
    }

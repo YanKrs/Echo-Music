@@ -18,8 +18,7 @@ class ProdutoController extends Controller
         $maisProdutos = categoria::find($produto->CATEGORIA_ID)->Produtos;
 
         return view('produto.show')->with(['produto'=> $produto, 'maisProdutos'=> $maisProdutos]);
-
-
+        
         return view('/dashboard')->with(['produto'=> $produto, 'maisProdutos'=> $maisProdutos]);
 
     }

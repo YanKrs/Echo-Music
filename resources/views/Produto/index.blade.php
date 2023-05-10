@@ -2,12 +2,14 @@
 @section('main')
 
 
-<h1 style="text-align: center;">Produtos</h1>
+<h1 style="text-align: center; margin-bottom: 5%; margin-top: 5%;">Produtos</h1>
 
 
 <div class="row align-items-start">
     <div class="col">
-    <div class="segundo" style="display:flex; justify-content: center;">
+    <div class="segundo" style="display:flex; justify-content: space-between; flex-wrap:wrap; gap: 20px 20px;">
+
+
     @foreach(\App\Models\Produto::all() as $produto)
 
     <div class="card mx-1" style="width: 18rem;">
@@ -19,8 +21,17 @@
   <div class="card-body">
     <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
     <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
+    <p>R${{$produto->PRODUTO_PRECO}}</p>
     <a href="/produto/{{$produto->PRODUTO_ID}}" class="btn btn-primary">Ver Item</a>
-  </div>
+<!-- Botão para colocar item no carrinho apenas se estiver logado -->
+
+@if(Auth::check())
+    <form  method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
+    <button type="submit" class="btn btn-outline-success">Comprar</button>
+</form>
+@endif
+
+</div>
 </div>
 
 @endforeach

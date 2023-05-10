@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\CarrinhoController;
+use App\Http\Controllers\PedidoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,11 +28,18 @@ Route::get('/produto/{produto}',[ProdutoController::class,'show'])->name("produt
 Route::get('/categoria', [CategoriaController::class,'index'])->name("categoria.index");
 Route::get('/categoria/{categoria}', [CategoriaController::class,'show']);
 
+
+
 Route::get('/login', [CategoriaController::class,'index']);
 
 
 Route::post('/carrinho/{produto}', [CarrinhoController::class, 'store'])->name('carrinho.store');
 Route::get('/carrinho' , [CarrinhoController::class, 'index'])->name('carrinho.index');
+
+
+Route::get('/pedido', [PedidoController::class, 'store'])->name('pedido.index');
+
+
 
 
 
