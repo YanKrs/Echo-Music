@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\CarrinhoController;
-use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\PedidoController;;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +38,7 @@ Route::get('/carrinho' , [CarrinhoController::class, 'index'])->name('carrinho.i
 
 
 Route::get('/pedido', [PedidoController::class, 'store'])->name('pedido.index');
+Route::get('/pedido/{pedido}', [PedidoController::class, 'show'])->name('pedido.show');
 
 
 

@@ -1,0 +1,16 @@
+Os pedido será exibido na pedido.index, apenas a numeração do pedido, dados basicos.
+Na pedido.show, quando clicar em cima de um pedido, será exibido os itens do pedido, para isto, será feito a relação das duas tabelas e na model de produto terá uma variável q trás os dados do pedido_item daquele usuário, assim como carrinho tem uma variável de produtos.
+
+
+
+
+
+
+
+
+where('USUARIO_ID', Auth::user()->USUARIO_ID);
+
+
+
+
+Ver endereço, depois pedido.show, onde mostrará os pedidos e a idéia era em seguida conseguir abrir o pedido e ver os itens do pedido

@@ -12,4 +12,12 @@ class Pedido extends Model
     protected $fillable = ['USUARIO_ID', 'STATUS_ID' , 'PEDIDO_DATA'];
     protected $table = "PEDIDO";
     protected $primaryKey = "PEDIDO_ID";
+    public $timestamps = false;
+
+    public function pedidoItem(){
+        return $this->hasMany(PedidoItem::class, 'PEDIDO_ID' , 'PEDIDO_ID');
+    }
+
+
+    
 }

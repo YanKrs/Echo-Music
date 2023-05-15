@@ -90,13 +90,7 @@
 
       <li><a href="/dashboard">Home</a></li>
         <li><a href="{{ route('produto.index') }}">Produtos</a></li>
-
-        @foreach(\App\Models\Categoria::all()->take(3) as $categoria)
-        <li><a href="{{route('categoria.index')}}">{{$categoria->CATEGORIA_NOME}}</a></li>
-        @endforeach
         <li><a href="{{ route('categoria.index') }}">Categorias</a></li>
-
-
 
       </ul>
     </nav>

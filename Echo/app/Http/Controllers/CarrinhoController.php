@@ -30,7 +30,8 @@ class CarrinhoController extends Controller
     }
 
     public function index(){
-        $carrinho = Carrinho::where('USUARIO_ID', Auth::user()->USUARIO_ID)->get();
+        $carrinho = Carrinho::where('USUARIO_ID', Auth::user()->USUARIO_ID)->where('ITEM_QTD', '<>', 0)->get();
+
         return view('carrinho.index')->with('carrinho', $carrinho);
     }
 

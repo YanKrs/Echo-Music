@@ -10,12 +10,7 @@
 
 
 
-
 @foreach($carrinho as $carrinho)
-
-
-
-
 
 
 
@@ -32,10 +27,11 @@
 
 </ol>
 
+
  <a href="{{route('pedido.index')}}"> <button type="submit" class="btn btn-success" style="margin: 50px; display: flex; ">Finalizar compra</button> </a>
-
-
 </form>
+<a href="{{route('pedido.index')}}"> <button  class="btn btn-info" style="margin: 50px; display: flex;">Ver Pedidos</button> </a>
+
 
 
 @endsection
