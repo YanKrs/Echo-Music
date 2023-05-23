@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\CarrinhoController;
-use App\Http\Controllers\PedidoController;;
+use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\EnderecoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,8 +38,14 @@ Route::post('/carrinho/{produto}', [CarrinhoController::class, 'store'])->name('
 Route::get('/carrinho' , [CarrinhoController::class, 'index'])->name('carrinho.index');
 
 
-Route::get('/pedido', [PedidoController::class, 'store'])->name('pedido.index');
-Route::get('/pedido/{pedido}', [PedidoController::class, 'show'])->name('pedido.show');
+Route::get('/endereco' , [EnderecoController::class, 'store'])->name('endereco.index');
+Route::post('/endereco' , [EnderecoController::class, 'save'])->name('endereco.show');
+
+
+Route::get('/pedido', [PedidoController::class, 'index'])->name('pedido.index');
+Route::post('/pedido', [PedidoController::class, 'store'])->name('pedido.store');
+Route::get('/pedido', [PedidoController::class])->name('pedido.status');
+
 
 
 

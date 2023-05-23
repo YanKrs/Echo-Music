@@ -14,3 +14,17 @@ where('USUARIO_ID', Auth::user()->USUARIO_ID);
 
 
 Ver endereço, depois pedido.show, onde mostrará os pedidos e a idéia era em seguida conseguir abrir o pedido e ver os itens do pedido
+
+
+
+
+
+
+
+
+
+
+
+
+
+quando clicar no botão finalizar compra, será acionado a função store e redirecionado para a página index, onde na página index mostrará os pedidos listados

@@ -13,4 +13,6 @@ class Endereco extends Model
     public $primaryKey = "ENDERECO_ID";
     public $timestamps = false;
 
+    
+
 }

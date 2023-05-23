@@ -18,6 +18,11 @@ class Carrinho extends Model
         return $this->belongsTo(Produto::class,'PRODUTO_ID','PRODUTO_ID');
    }
 
+   public function produtos()
+    {
+        return $this->hasMany(Produto::class, 'CARRINHO_ID');
+    }
+
    protected function setKeysForSaveQuery($query){
         $query->where('USUARIO_ID', $this->getAttribute('USUARIO_ID'))
                 ->where('PRODUTO_ID',$this->getAttribute('PRODUTO_ID'));
