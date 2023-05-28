@@ -36,6 +36,7 @@ Route::get('/login', [CategoriaController::class,'index']);
 
 Route::post('/carrinho/{produto}', [CarrinhoController::class, 'store'])->name('carrinho.store');
 Route::get('/carrinho' , [CarrinhoController::class, 'index'])->name('carrinho.index');
+Route::post('/carrinho/remove/{produto}', [CarrinhoController::class, 'remove'])->name('carrinho.remove');
 
 
 Route::get('/endereco' , [EnderecoController::class, 'store'])->name('endereco.index');

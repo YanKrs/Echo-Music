@@ -12,20 +12,28 @@
 
 @foreach($carrinho as $carrinho)
 
-
+<form  method="POST" action="{{route('carrinho.remove', $carrinho->Produto->PRODUTO_ID)}}">
+    
+@csrf
 
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">{{$carrinho->Produto->PRODUTO_NOME}}</div>
       {{$carrinho->Produto->PRODUTO_DESC}}
     </div>
+    <p style="margin-right: 10%" > <button type="submit"> <strong>X</strong> </button> </p>
     <p style="text-align:left;">R${{$carrinho->Produto->PRODUTO_PRECO * $carrinho->ITEM_QTD}}</p>
+
     <span class="badge bg-primary rounded-pill">{{$carrinho->ITEM_QTD}}</span>
+
+    </form>
 </li>
 
 @endforeach
 
 </ol>
+
+
 
 
 <!-- <form action="{{route('pedido.store')}}" method="POST"> -->
