@@ -33,12 +33,29 @@
             <fieldset>
 
                 <div style="text-align:center; margin-bottom:2%;">
+                <label>CPF</label>
+                        <input type="text" name="cpf" maxlength="11">
+                </div>
+
+
+            </fieldset>
+
+
+
+
+
+            <fieldset>
+
+                <div style="text-align:center; margin-bottom:2%;">
                 <label>Senha</label>
                     <input type="password" required name="password" autofocus>
                 </div>
 
 
             </fieldset>
+
+
+
 
 
 

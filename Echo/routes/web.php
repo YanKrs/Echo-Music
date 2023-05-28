@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\EnderecoController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,15 @@ use App\Http\Controllers\EnderecoController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('/user', [UserController::class,'index'])->name("user.index");
+Route::post('/user', [UserController::class,'show'])->name("user.show");
+
+
+
+
 
 Route::get('/produto', [ProdutoController::class,'index'])->name("produto.index");
 Route::get('/produto/{produto}',[ProdutoController::class,'show'])->name("produto.show");
