@@ -10,7 +10,7 @@
     <div class="segundo" style="display:flex; justify-content: space-between; flex-wrap:wrap; gap: 20px 20px;">
 
 
-    @foreach(\App\Models\Produto::all() as $produto)
+    @foreach($produtos as $produto)
 
     <div class="card mx-1" style="width: 18rem;">
     @if(Isset($produto->ProdutoImagem[0]->IMAGEM_URL))

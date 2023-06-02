@@ -2,7 +2,7 @@
 @section('main')
 
 
-Seu pedido está no Status  {{$pedido}}
+Seu pedido está no Status  {{$pedidos}}
 
 
 @endsection

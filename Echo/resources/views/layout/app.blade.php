@@ -105,7 +105,7 @@
   </main>
 
 
-  <footer class="bg-dark text-light">
+  <footer class="bg-dark text-light" style="margin-top:15%;">
     <div class="container-fluid py-3" style="background-color: #18171d;">
     <div class="row">
       <div class="col-4">
@@ -118,8 +118,7 @@
       </div>
       <div class="col-8">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed necessitatibus id asperiores iste fugiat,             praesentium obcaecati explicabo consequatur voluptatem eos earum blanditiis dolorem eaque veritatis libero?               Magni, nam fugiat.
-        </p>
+        Na Echo, nossa paixão pela música nos impulsiona a fornecer produtos de alta qualidade para músicos de todos os níveis de habilidade. Seja você um iniciante animado em busca do seu primeiro instrumento ou um músico experiente procurando aprimorar seu som, temos tudo o que você precisa para criar música e se expressar.        </p>
         <ul class="nav">
           <li class="nav-link" ><i class="fab fa-facebook fa-3x "></i></li>
           <li class="nav-link"><i class="fab fa-instagram fa-3x"></i></li>

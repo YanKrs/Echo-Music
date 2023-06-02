@@ -18,6 +18,10 @@ class Pedido extends Model
         return $this->hasMany(PedidoItem::class, 'PEDIDO_ID' , 'PEDIDO_ID');
     }
 
+    public function Status(){
+        return $this->hasOne(PedidoStatus::class, 'STATUS_ID', 'STATUS_ID');
+    }
 
-    
+
+
 }

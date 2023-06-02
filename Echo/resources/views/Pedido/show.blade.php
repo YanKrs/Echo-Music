@@ -1,29 +1,27 @@
 @extends('layout.app')
 @section('main')
 
+<h1 style="text-align: center; margin-bottom:5%;">Seus Pedidos</h1>
 
-<h1 style="text-align: center">Pedidos de {{Auth::user()->USUARIO_NOME}}</h1>
 
 
-<div style="display: flex; flex-direction: row;">
+@foreach($pedidos as $pedido)
 
-@foreach($pedido as $pedido)
-
-<form  method="POST" action="{{route('pedido.show', $pedido->PEDIDO_ID)}}">
 @csrf
-        <div class="card w-20">
-        <div class="card-body">
-            <h5 class="card-title">Pedido</h5>
-            <p class="card-text">{{$pedido}}</p>
-            <a href="{{route('pedido.show', 'PEDIDO_ID')}}" class="btn btn-primary">Ver Pedido</a>
-        </div>
-        </div>
 
-</form>
+  <li class="list-group-item d-flex justify-content-between align-items-start" style="background-color:#96be25; margin: 3%;">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Número do seu pedido:{{$pedido->PEDIDO_ID}}</div>
+      Status do seu pedido: {{$pedido->STATUS_ID}}
+    </div>
+    <p style="text-align:left;">Dia do pedido: {{$pedido->PEDIDO_DATA}}</p>
+
+    <span class="badge bg-primary rounded-pill"></span>
+
+    </form>
+</li>
 
 @endforeach
-</div>
-
 
 
 @endsection

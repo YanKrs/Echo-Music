@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Endereco;
 use App\Models\Pedido;
+use App\Models\Produto;
+use App\Models\PedidoItem;
+use App\Models\Carrinho;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -21,7 +24,7 @@ class EnderecoController extends Controller
     }
 
 
-    public function save(Request $request)
+    public function save(Request $request, Produto $produto)
     {
 
         $usuario = Auth::user()->USUARIO_ID;
@@ -58,8 +61,7 @@ class EnderecoController extends Controller
                 ]);
             }
 
-
-
-            return view('endereco.show');
+            $carrinho = Carrinho::where('USUARIO_ID', Auth::user()->USUARIO_ID)->where('ITEM_QTD', '<>', 0)->get();
+            return view('endereco.show')->with('carrinho', $carrinho);
     }
 }

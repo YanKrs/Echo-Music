@@ -53,9 +53,11 @@ Route::get('/endereco' , [EnderecoController::class, 'store'])->name('endereco.i
 Route::post('/endereco' , [EnderecoController::class, 'save'])->name('endereco.show');
 
 
-Route::get('/pedido', [PedidoController::class, 'index'])->name('pedido.index');
+Route::get('/pedido/mostrando', [PedidoController::class, 'index'])->name('pedido.index');
 Route::post('/pedido', [PedidoController::class, 'store'])->name('pedido.store');
-Route::get('/pedido', [PedidoController::class])->name('pedido.status');
+Route::get('/pedido/show', [PedidoController::class, 'show'])->name('pedido.show');
+Route::get('/pedido/fail', [PedidoController::class])->name('pedido.fail');
+
 
 
 

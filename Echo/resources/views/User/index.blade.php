@@ -11,7 +11,7 @@
             <fieldset>
                 <div style="text-align:center; margin-bottom:2%;">
                 <label>Nome</label>
-                
+
                     <input type="text" required name="name" autofocus value="{{$usuario->USUARIO_NOME}}">
 
                 </div>
@@ -41,9 +41,13 @@
             <br>
 
             <button type="submite">
-                Registrar
+                Salvar
             </button>
         </div>
     </form>
+
+    <a href="{{ route('pedido.show') }}">
+    <button>Ver pedidos</button>
+</a>
     </main>
 @endsection

@@ -9,10 +9,9 @@ use Illuminate\Support\Facades\Auth;
 
 class CarrinhoController extends Controller
 {
-    public function store(Produto $produto){
+    public function store(Produto $produto, Request $request){
         $item = Carrinho::where('USUARIO_ID', Auth::user()->USUARIO_ID)
         ->where('PRODUTO_ID', $produto->PRODUTO_ID)->first();
-
 
         if($item){
             $item = $item->update([
@@ -22,7 +21,7 @@ class CarrinhoController extends Controller
             $item = Carrinho::create([
                 'USUARIO_ID' => Auth::user()->USUARIO_ID,
                 'PRODUTO_ID' => $produto->PRODUTO_ID,
-                'ITEM_QTD' =>1
+                'ITEM_QTD' =>$request->quantidade
             ]);
         }
 
@@ -42,7 +41,7 @@ class CarrinhoController extends Controller
         public function remove(Produto $produto){
 
             $item = Carrinho::where('USUARIO_ID', Auth::user()->USUARIO_ID)->where('PRODUTO_ID' , $produto->PRODUTO_ID)->first();;
-            
+
             if ($item) {
                 $item = $item->update([
                     'ITEM_QTD' => 0
