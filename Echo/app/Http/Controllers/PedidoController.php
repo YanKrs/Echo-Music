@@ -54,9 +54,13 @@ class PedidoController extends Controller
     }
         }
 
-        public function show(){
+        public function show(PedidoStatus $status){
 
             $todosPedidos = Pedido::where('USUARIO_ID' , Auth::user()->USUARIO_ID)->get();
+
+        
+
+
 
             return view('pedido.show')->with(['pedidos'=> $todosPedidos]);
 

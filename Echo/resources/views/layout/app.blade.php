@@ -59,9 +59,10 @@
 </button>
                 </form>
         @else
-        <a href="{{ route('login') }}" style="color: #e3762b;">Fazer Login</a>
-        <br>
-        <a href="{{ route('register') }}" style="color: #e3762b;">Registrar</a>
+
+        <a href="{{ route('login') }}" style="color: #e3762b;"> <button class="btn btn-warning"> Fazer Login </button> </a>
+        
+        <a href="{{ route('register') }}" style="color: #e3762b;"><button class="btn btn-warning"> Registrar </button></a>
         @endif
       </span>
 
