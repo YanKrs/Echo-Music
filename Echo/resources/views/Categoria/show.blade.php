@@ -47,11 +47,7 @@
     <a href="/produto/{{$produto->PRODUTO_ID}}" class="btn btn-primary">Ver Item</a>
 <!-- Botão para colocar item no carrinho apenas se estiver logado -->
 
-@if(Auth::check())
-    <form  method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
-    <button type="submit" class="btn btn-outline-success">Comprar</button>
-</form>
-@endif
+
 
 
 </div>

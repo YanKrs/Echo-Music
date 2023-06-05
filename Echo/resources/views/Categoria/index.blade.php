@@ -4,11 +4,14 @@
 
     <h1 style="text-align: center;">Categorias</h1>
 
+
+    <div class="container overflow-hidden text-center" style="display:flex; flex-direction: row; justify-content: center;">
+
+
     @foreach(\App\Models\Categoria::all() as $categoria)
 
 
 
-    <div class="container overflow-hidden text-center">
   <div class="row gx-5">
     <div class="col">
      <div class="p-3">

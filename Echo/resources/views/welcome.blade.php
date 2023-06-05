@@ -80,7 +80,7 @@
 
   <div class="row align-items-start">
     <div class="col">
-    <div class="segundo" style="display:flex; justify-content: center;">
+    <div class="segundo" style="display:flex; justify-content: center; margin: 5% 0% 5% 0%">
     @foreach(\App\Models\Produto::all()->take(3) as $produto)
 
     <div class="card mx-5" style="width: 18rem;">
@@ -102,11 +102,7 @@
     <a href="/produto/{{$produto->PRODUTO_ID}}" class="btn btn-primary">Ver Item</a>
 <!-- Botão para colocar item no carrinho apenas se estiver logado -->
 
-@if(Auth::check())
-    <form  method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
-    <button type="submit" class="btn btn-outline-success">Comprar</button>
-</form>
-@endif
+
 
   </div>
 </div>
@@ -139,7 +135,7 @@
 
   <div class="row align-items-start">
     <div class="col">
-    <div class="segundo" style="display:flex; justify-content: center;">
+    <div class="segundo" style="display:flex; justify-content: center; margin: 5% 0% 0% 0%">
     @foreach(\App\Models\Produto::all()->take(-3) as $produto)
 
     <div class="card mx-5" style="width: 18rem;">
@@ -161,11 +157,7 @@
     <a href="/produto/{{$produto->PRODUTO_ID}}" class="btn btn-primary">Ver Item</a>
 <!-- Botão para colocar item no carrinho apenas se estiver logado -->
 
-@if(Auth::check())
-    <form  method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
-    <button type="submit" class="btn btn-outline-success">Comprar</button>
-</form>
-@endif
+
 
   </div>
 </div>

@@ -29,7 +29,7 @@
 
                 <div style="text-align:center; margin-bottom:2%;">
                 <label>CPF</label>
-                        <input type="text" name="cpf" maxlength="11">
+                        <input type="text" name="cpf" maxlength="11" mminlength="11">
                 </div>
 
 

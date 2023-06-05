@@ -43,7 +43,7 @@
 @else
 
 
-<h2 style="text-align: center; margin-bottom: 10%; font-size: 80px;">Seu carrinho está vazio ):</h2>
+<h2 style="text-align: center; margin-bottom: 10%; font-size: 80px;">Seu carrinho está vazio :(</h2>
 
 
 <a href="{{route('endereco.index')}}"><button class="btn btn-success" style="margin: 50px; display: flex;">Finalizar compra</button></a>

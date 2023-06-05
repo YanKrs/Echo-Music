@@ -21,12 +21,14 @@ a:hover{
 
 #header{
     box-sizing: border-box;
-    height: 70px;
+    height: 40px;
     padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgb(55, 118, 124);
+    background: #38221f;
+
+
 }
 
 #menu {

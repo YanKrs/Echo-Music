@@ -37,11 +37,15 @@
         @else
                 <p style="font-size: smaller;">Aproveite, ainda temos <b style="color: green;">{{$produto->ProdutoEstoque->PRODUTO_QTD}} </b> itens no estoque</p><br>
                 <p>
-                    <input type="number" max="{{$produto->ProdutoEstoque->PRODUTO_QTD}}" min="1" name="quantidade">
+                    <br>
                     <b>R$ {{ $produto->PRODUTO_PRECO }} em até
                         <br>10 x de R$ {{ $produto->PRODUTO_PRECO / 10 }} sem juros</b>
                     </p>
+                    Informe a quantidade:<input type="number" max="{{$produto->ProdutoEstoque->PRODUTO_QTD}}" min="1" name="quantidade" value="1">
+
                 <div class="d-grid gap-2 col-6 mx-auto">
+
+
 
                 <button type="submit" class="btn btn-outline-success">Comprar</button>
                     <p><b>R$ {{  $produto->PRODUTO_PRECO - $produto->PRODUTO_DESCONTO }} à vista</b>  (<b style="color: red; font-size: smaller;">com 10,00% de desconto no Boleto Bancário / Transferência Itaú</b>)</p>
