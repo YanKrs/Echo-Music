@@ -18,7 +18,7 @@ class PedidoController extends Controller
          if(count($produtos) > 0){
         $pedido = Pedido::create([
             'USUARIO_ID' => Auth::user()->USUARIO_ID ,
-            'STATUS_ID' => 1,
+            'STATUS_ID' => 4,
             'PEDIDO_DATA' => now()
         ]);
         foreach ($produtos as $produto) {
@@ -58,7 +58,7 @@ class PedidoController extends Controller
 
             $todosPedidos = Pedido::where('USUARIO_ID' , Auth::user()->USUARIO_ID)->get();
 
-        
+
 
 
 

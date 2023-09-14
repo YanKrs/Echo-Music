@@ -74,7 +74,7 @@
   </div>
   <div class="col-md-6">
     <label for="inputCity" class="form-label">CEP</label>
-    <input type="text" class="form-control"  name="Cep"  value="{{$endereco->ENDERECO_CEP}}" maxlength="8" mminlength="8" required>
+    <input type="text" class="form-control"  name="Cep"  value="{{$endereco->ENDERECO_CEP}}" maxlength="8" minlength="8" required>
 
   </div>
   <div class="col-md-4">
